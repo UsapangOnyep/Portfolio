@@ -1,0 +1,231 @@
+:root {
+  --bg: #18191a;
+  --surface: #242526;
+  --primary: #bb86fc;
+  --accent: #03dac6;
+  --text: #e4e6eb;
+  --text-muted: #b0b3b8;
+  --border: #3a3b3c;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.profile {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  /* overflow: hidden; */
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.cover-photo {
+  background: url('../cover.jpg') center/cover no-repeat;
+  height: 200px;
+}
+
+.profile-info {
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+}
+
+.profile-picture {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid var(--bg);
+  position: absolute;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--bg);
+}
+
+.name {
+  margin-top: 70px;
+  margin-bottom: 0.25rem;
+  font-size: 1.8rem;
+}
+
+.bio {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+.profile-nav {
+  background-color: var(--bg);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.profile-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.profile-nav li {
+  margin: 0;
+}
+
+.profile-nav a {
+  display: inline-block;
+  padding: 1rem;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.profile-nav a.active,
+.profile-nav a:hover {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+}
+
+.profile-section {
+  padding: 2.2rem 2rem 1.5rem 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.card {
+  background-color: var(--surface);
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--shadow-elevation);
+}
+
+.card-img {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  transition: transform 0.2s ease;
+}
+
+.card-img img:hover {
+  transform: scale(1.03);
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.card-description {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+.card-link {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* Carousel container */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  height: 200px;
+}
+
+/* Inner wrapper for images */
+.carousel-images {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Each image */
+.carousel-images img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+  height: 200px;
+  border-radius: 6px;
+}
+
+/* Prev/Next buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(18, 18, 18, 0.6);
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 50%;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+.tech-stack {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tech {
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  padding: 0.3rem 0.6rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background 0.2s ease;
+}
+
+.tech:hover {
+  background-color: var(--surface);
+  color: var(--primary);
+  border-color: var(--primary);
+  cursor: default;
+}
+
+.profile-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--bg);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
